@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
 
-    localStorage.clear();
+  
   }
 
 
