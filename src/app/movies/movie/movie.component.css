@@ -1,0 +1,23 @@
+.u-sizeFit {
+    margin: 2em;
+}
+.mytitle {
+    font-size: 1.5em!important;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+.favorite {
+    color: rgb(230, 209, 23)
+}
+.marginIcon {
+    margin-left: 2em;
+}
+
+.poster {
+    -webkit-box-shadow: 2px 2px 40px 5px rgba(202,204,204,1);
+    -moz-box-shadow: 2px 2px 40px 5px rgba(202,204,204,1);
+    box-shadow: 2px 2px 40px 5px rgba(202,204,204,1);
+    
+}
+ 
+  

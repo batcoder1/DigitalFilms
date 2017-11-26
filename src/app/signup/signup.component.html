@@ -1,0 +1,34 @@
+<div class="Panel">
+  <div class="Grid Grid--alignCenter">
+    <div class="Grid-cell u-md-size6of12">
+      <div class="Login">
+        <div class="LoginForm">
+          <div>
+            <form class="Form" noValidate>
+              <fieldset>
+                <div class="Form-group">
+                  <label htmlFor="username" class="Form-label">Nombre de usuario</label>
+                  <input type="username" name="username" id="username" class="Form-field" autoComplete="on"  [(ngModel)] ="_username"/>
+                </div>
+                <div class="Form-group">
+                  <label htmlFor="password" class="Form-label">Contraseña</label>
+                  <input type="password" name="password" id="password" class="Form-field" autoComplete="off" [(ngModel)] ="_password"/>
+                </div>
+                <div class="Form-group">
+                    <label htmlFor="password" class="Form-label">Repite Contraseña</label>
+                    <input type="password"  name="password" id="password" class="Form-field" autoComplete="off" [(ngModel)] ="_passwordConfirm"/>
+                </div>
+                <p class="error" *ngIf="_errorPassword">{{_error}}</p>
+                <p class="error" >{{_respuesta}}</p>
+                <button   name="button" class="Button Button--primary Button--medium Button--block" (click)="handleSignup()" >Enviar</button>
+
+              </fieldset>
+            </form>
+            <p class="u-center u-divider-top"><a class="Button Button--link" [routerLink]="['']" >¿Ya tienes cuenta? Entra</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 

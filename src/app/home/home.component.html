@@ -1,0 +1,47 @@
+<div class="Panel">
+    <div class="Grid Grid--alignLeft">
+        <div class="Grid-cell u-md-size3of12 ">
+      
+        </div>
+        <div class="Grid-cell u-md-size9of12 parent favoriteLabel">
+          <label class="title-section title">Watches Movies</label>
+        </div>
+      </div>
+    
+  <div class="Grid Grid--alignLeft">
+    <div class="Grid-cell u-md-size3of12 ">
+      <i class="fa fa-user fa-5x userIcon"></i>
+      <p class="name">{{username}}</p>
+      <p class="Form-label title">email</p>
+      <p class="Form-label">pds@gmail.com</p>
+      <label class="Form-label title">Aficiones</label>
+      <p class="Form-label">Cine, musica, series, deporte</p>
+      <label class="Form-label title">Watches Movie Genres</label>
+      <div class="forzeleft">
+        <canvas  baseChart [datasets]="radarChartData" [labels]="radarChartLabels" [chartType]="radarChartType"  [options]="option" (chartHover)="chartHovered($event)"  
+        (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+    <div class="Grid-cell u-md-size9of12 ">
+      <canvas class="chart" baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors"
+        [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+    </div>
+
+
+  </div>
+  <div class="Grid Grid--alignLeft">
+    <div class="Grid-cell u-md-size3of12 ">
+    </div>
+    <div class="Grid-cell u-md-size9of12 parent favoriteLabel">
+      <label class="title-section title">Favorites</label>
+      <p *ngIf="favorites.length === 0" class="Form-label title">You don't have favorites</p>
+      
+    </div>
+  </div>
+  <div class="Grid Grid--alignLeft">
+    <div class="Grid-cell u-md-size3of12 ">
+    </div>
+    <div class="Grid-cell u-md-size9of12 parent">
+      <img class="child poster  " *ngFor="let movie of favorites; let i = index;" id="movie-{{i}}" src={{base_url}}{{poster_size}}{{movie.poster_path}}/>
+    </div>
+  </div>

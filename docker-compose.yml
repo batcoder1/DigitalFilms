@@ -1,0 +1,27 @@
+version: '3'
+services:
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+  doc:
+    image: swaggerapi/swagger-ui
+    environment:
+      - SWAGGER_JSON=/docs/swagger.json
+    volumes:
+      - ./backend/docs:/docs
+    ports:
+      - "3002:8080"
+  server:
+    build:
+      context: backend
+    image: "do-server-test"
+    env_file:
+      - ./backend.env
+    environment:
+      - MOVIE_DB_API_KEY=f9909e40ab2b4658f8b2b195d5b03365
+    depends_on:
+      - mongo
+    ports:
+      - "3001:3001"
+    command: sh -c "npx nodemon npm start"
