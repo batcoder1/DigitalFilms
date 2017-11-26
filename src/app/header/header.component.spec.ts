@@ -42,4 +42,20 @@ describe('HeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should be clear localStorage when call logout ', () => {
+    localStorage.setItem('token', 'dfasdfdsafs');
+
+    component.logout();
+
+    expect(localStorage.getItem('token')).toBeNull();
+  });
+
+  it('should be username when init component', () => {
+    localStorage.setItem('username', 'pepe');
+
+    component.ngOnInit();
+
+    expect(component.username).toEqual('pepe');
+  });
 });

@@ -30,6 +30,7 @@ describe('LoginComponent', () => {
   }));
 
   beforeEach( () => {
+    // TOKEN de pepe
     localStorage.setItem('token', TOKEN);
     fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;
@@ -37,6 +38,10 @@ describe('LoginComponent', () => {
   } );
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('should create username pepe in localStorage', () => {
+    component.handleLogin();
+    expect(localStorage.getItem('username')).toEqual('pepe');
   });
 
 });

@@ -23,8 +23,5 @@ export class HeaderComponent implements OnInit {
     this.route.navigate(['']);
     this.username  = '';
   }
- searchMovie(title: string) {
-    this.service.searchByTitle(title).subscribe();
-  }
 
 }

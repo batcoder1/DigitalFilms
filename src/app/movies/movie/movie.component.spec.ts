@@ -31,8 +31,7 @@ describe('MovieComponent', () => {
 
     TestBed.configureTestingModule({
       imports: [
-        AppModule,
-        HttpClientModule
+        AppModule
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       providers: [
@@ -45,15 +44,28 @@ describe('MovieComponent', () => {
   beforeEach( () => {
     localStorage.setItem('token', TOKEN);
     fixture = TestBed.createComponent(MovieComponent);
-    component = fixture.componentInstance;
+    component = fixture.debugElement.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create ', async(() => {
     expect(component).toBeTruthy();
-  });
+  }));
+
   it('should set users', async (() => {
     component.getMovies();
     expect(component.movies).not.toEqual(null);
+  }));
+
+  it('should be called getMovies', async (() => {
+    spyOn(component, 'getMovies').and.callThrough();
+    component.ngOnInit();
+    expect(component.getMovies).toHaveBeenCalled();
+  }));
+
+  it('should be called getConfiguration', async (() => {
+    spyOn(component, 'getConfiguration').and.callThrough();
+    component.ngOnInit();
+    expect(component.getConfiguration).toHaveBeenCalled();
   }));
 });

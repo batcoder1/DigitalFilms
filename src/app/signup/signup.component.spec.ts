@@ -34,4 +34,10 @@ describe('SignupComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should be called handleSignup', async(() => {
+    spyOn(component, 'handleSignup').and.callThrough();
+    component.handleSignup();
+    expect(component.handleSignup).toHaveBeenCalled();
+  }));
 });
