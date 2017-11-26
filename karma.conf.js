@@ -29,20 +29,7 @@ module.exports = function (config) {
     autoWatch: true,
     browsers: ['Chrome'],
     singleRun: false,
-    files: [
-    
-      {
-        pattern: 'public/templates/**/*.html',
-        included: false,
-        served: true
-      },
-      {
-        pattern: 'public/css/**/*.css',
-        included: false,
-        served: true
-      },
-     
-    ]
+    files: []
 
   });
 };

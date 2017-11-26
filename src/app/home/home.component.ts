@@ -24,7 +24,23 @@ export class HomeComponent implements OnInit {
   lineChartOptions = {
     responsive: true
   };
-
+  chartColors: Array<any> = [
+    { // first color
+      backgroundColor: '#b7dee777',
+      borderColor: '#98ddeb',
+      pointBackgroundColor: '#b7dee777',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: '#b7dee777'
+    },
+    { // second color
+      backgroundColor: '#e7b7c377',
+      borderColor: '#eb8c9b',
+      pointBackgroundColor: 'e7b7c377',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'e7b7c377'
+    }];
   lineChartLegend = false;
   lineChartType = 'line';
    
