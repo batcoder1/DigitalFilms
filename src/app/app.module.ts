@@ -19,8 +19,7 @@ import { AuthGuard } from './auth-guard.service';
 import { HttpModule } from '@angular/http';
 import { AuthModule, authHttpServiceFactory } from './auth.module';
 import { ChartsModule } from 'ng2-charts';
-
-
+ 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, data: { stateName: 'home' } ,  canActivate: [AuthGuard] },
   { path: '', component: LoginComponent },
@@ -28,6 +27,7 @@ const routes: Routes = [
   { path: 'movies', component: MovieComponent,  canActivate: [AuthGuard] },
 
 ];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +44,7 @@ const routes: Routes = [
     FormsModule,
     AuthModule,
     ChartsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
   providers: [
     { provide: AuthService, useClass: AuthService, deps: []},

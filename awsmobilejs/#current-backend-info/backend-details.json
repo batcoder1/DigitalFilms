@@ -1,0 +1,103 @@
+{
+	"name": "Digital",
+	"projectId": "f53dafe1-3e77-4dec-9441-98c3bb784996",
+	"region": "eu-west-1",
+	"state": "NORMAL",
+	"createdDate": "2017-12-22T20:13:24.954Z",
+	"lastUpdatedDate": "2017-12-22T20:16:20.893Z",
+	"consoleUrl": "https://console.aws.amazon.com/mobilehub/home#/f53dafe1-3e77-4dec-9441-98c3bb784996/build",
+	"resources": [
+		{
+			"type": "AWS::Pinpoint::AnalyticsApplication",
+			"name": "digital_MobileHub",
+			"arn": "e60e0ba55f424be9824f1c04b6eb37b2",
+			"feature": "analytics",
+			"attributes": {
+				"lastUpdateRequestID": "90adaede-e754-11e7-ac21-d1966f8cfa27"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "digital_mobileanalytics_MOBILEHUB_1242215993",
+			"arn": null,
+			"feature": "analytics",
+			"attributes": {
+				"authType": "unauthenticated",
+				"lastUpdateRequestID": "90adaede-e754-11e7-ac21-d1966f8cfa27",
+				"role": "digital_unauth_MOBILEHUB_1242215993"
+			}
+		},
+		{
+			"type": "AWS::Cognito::IdentityPool",
+			"name": "digital_MOBILEHUB_1242215993",
+			"arn": "eu-west-1:8f920f03-220f-4c0b-84f9-272fc70ff3e9",
+			"feature": "user-signin",
+			"attributes": {
+				"lastUpdateRequestID": "90adaede-e754-11e7-ac21-d1966f8cfa27",
+				"poolid": "eu-west-1:8f920f03-220f-4c0b-84f9-272fc70ff3e9",
+				"roleARNs": "arn:aws:iam::404654146414:role/digital_unauth_MOBILEHUB_1242215993"
+			}
+		},
+		{
+			"type": "AWS::IAM::Role",
+			"name": "digital_unauth_MOBILEHUB_1242215993",
+			"arn": "arn:aws:iam::404654146414:role/digital_unauth_MOBILEHUB_1242215993",
+			"feature": "user-signin",
+			"attributes": {
+				"authType": "unauthenticated",
+				"lastUpdateRequestID": "90adaede-e754-11e7-ac21-d1966f8cfa27"
+			}
+		},
+		{
+			"type": "AWS::S3::Bucket",
+			"name": "digital-hosting-mobilehub-1242215993",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"lastUpdateRequestID": "90adaede-e754-11e7-ac21-d1966f8cfa27",
+				"region": "eu-west-1"
+			}
+		},
+		{
+			"type": "AWS::CloudFront::Distribution",
+			"name": "d3zla3oujiywe.cloudfront.net",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"id": "E2XD50XJ4LDZEX",
+				"lastUpdateRequestID": "90adaede-e754-11e7-ac21-d1966f8cfa27"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "digital_hosting_MOBILEHUB_1242215993",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"authType": "unauthenticated",
+				"lastUpdateRequestID": "90adaede-e754-11e7-ac21-d1966f8cfa27",
+				"role": "digital_unauth_MOBILEHUB_1242215993"
+			}
+		},
+		{
+			"type": "AWS::S3::Bucket",
+			"name": "digital-deployments-mobilehub-1242215993",
+			"arn": null,
+			"feature": "common",
+			"attributes": {
+				"region": "eu-west-1"
+			}
+		},
+		{
+			"type": "AWS::CloudFormation::Stack",
+			"name": "Development",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"primary": "true",
+				"region": "eu-west-1",
+				"stateSummary": "NOT_YET_DEPLOYED"
+			}
+		}
+	]
+}
