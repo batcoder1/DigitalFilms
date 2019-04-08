@@ -3,7 +3,7 @@ import { MoviesService } from '../movies/movies.service';
 import { LoginResponse } from '../movies/movie';
 import { Router, ActivatedRoute } from '@angular/router';
 import { JwtHelper } from 'angular2-jwt';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-signup',

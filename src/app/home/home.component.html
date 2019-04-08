@@ -18,13 +18,12 @@
       <p class="Form-label">Cine, musica, series, deporte</p>
       <label class="Form-label title">Watches Movie Genres</label>
       <div class="forzeleft">
-        <canvas  baseChart [datasets]="radarChartData" [colors]="chartColors" [labels]="radarChartLabels" [chartType]="radarChartType"  [options]="option" (chartHover)="chartHovered($event)"  
-        (chartClick)="chartClicked($event)"></canvas>
+        <canvas  baseChart [datasets]="radarChartData" [colors]="chartColors" [labels]="radarChartLabels" [chartType]="radarChartType"  [options]="option" ></canvas>
       </div>
     </div>
     <div class="Grid-cell u-md-size9of12 ">
       <canvas class="chart" baseChart [datasets]="lineChartData" [colors]="chartColors" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors"
-        [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+        [legend]="lineChartLegend" [chartType]="lineChartType" ></canvas>
     </div>
 
 

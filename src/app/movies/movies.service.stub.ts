@@ -1,6 +1,5 @@
 import { HttpResponse } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
+import { Observable ,  of } from 'rxjs';
 
 export class MoviesServicesStub {
 

@@ -1,7 +1,7 @@
 <div class="Grid">
   <div class="Grid-cell">
-    <button (click)="filter(title.value)" id="filter"></button>
-
+<!--     <button (click)="filter(title?.value)" id="filter"></button>
+ -->
     <div class="u-md-flex movie" *ngFor="let movie of allMoviesWithFavorites; let i = index;" id="movie-{{i}}">
       <img class="u-sizeFit poster  " src={{base_url}}{{poster_size}}{{movie.poster_path}}/>
       <div class="u-sizeFit">

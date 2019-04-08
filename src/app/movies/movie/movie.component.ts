@@ -1,8 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs/Subscription';
-import { of } from 'rxjs/observable/of';
-import { Observable } from 'rxjs/Observable';
-import { map } from 'rxjs/operators/map';
+import { Subscription ,  of ,  Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Movie } from '../movie';
 import { MoviesService } from '../movies.service';
 import { HttpResponse } from '@angular/common/http';

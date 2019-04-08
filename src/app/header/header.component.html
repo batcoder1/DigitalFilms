@@ -5,7 +5,7 @@
       <h1 class="HeaderLogin-title">Paga+Tarde</h1></div>
   </div>
   
-  <nav *ngIf="auth.loggedIn()" class="horizontal-menu parent" >
+  <nav *ngIf="loggedIn" class="horizontal-menu parent" >
       <a id="dashboard" class="child-flex" ngui-menu="bottom" [routerLink]="['/home']">Dashboard</a>
       <a id="movies" class="child-flex" ngui-menu="bottom" [routerLink]="['/movies']">Movies</a>
       <button ngui-menu="bottom" class="child-flex-big"  (click)="logout()"><i class="fa fa-sign-out fa-2x icon"></i></button>  

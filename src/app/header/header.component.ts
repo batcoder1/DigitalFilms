@@ -13,9 +13,11 @@ import { MoviesService } from '../movies/movies.service';
 export class HeaderComponent implements OnInit {
   verMasTarde = '../assets/ver-mas-tarde.svg';
   username: string;
+  loggedIn: Boolean;
   constructor( private auth: AuthService, private route: Router, private service: MoviesService ) { }
 
   ngOnInit() {
+    this.loggedIn = this.auth.loggedIn();
     this.username = localStorage.getItem('username');
   }
   logout() {

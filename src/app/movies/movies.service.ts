@@ -1,5 +1,5 @@
-import { of } from 'rxjs/observable/of';
-import 'rxjs/add/operator/map';
+import { of ,  Observable ,  Subscriber } from 'rxjs';
+
 import { Injectable } from '@angular/core';
 import { Movie, LoginResponse, LoginRequest } from './movie';
 import { AuthHttp } from 'angular2-jwt';
@@ -8,11 +8,9 @@ import { environment } from '../../environments/environment';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { HttpResponse } from '@angular/common/http';
 
-import { map } from 'rxjs/operators/map';
-import { Observable } from 'rxjs/Observable';
+import { map } from 'rxjs/operators';
 import { element } from 'protractor';
 import { CONFIGURATION, BASE_URL, MOVIES, USER, FAVORITES, LOGIN, MOVIES_SEARCH } from '../utils/constantes';
-import { Subscriber } from 'rxjs/Subscriber';
 
 @Injectable()
 export class MoviesService {
